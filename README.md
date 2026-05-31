@@ -1,112 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://16.171.43.32/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Infrastructure Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    min-height:100vh;
+    overflow:hidden;
+    color:white;
+    background: linear-gradient(-45deg,#0f172a,#1e3a8a,#3b82f6,#06b6d4);
+    background-size:400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.particles{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:1;
+}
+
+.particles span{
+    position:absolute;
+    display:block;
+    width:6px;
+    height:6px;
+    background:rgba(255,255,255,0.4);
+    border-radius:50%;
+    animation: float 15s linear infinite;
+}
+
+.particles span:nth-child(1){left:10%;animation-delay:0s;}
+.particles span:nth-child(2){left:20%;animation-delay:2s;}
+.particles span:nth-child(3){left:40%;animation-delay:5s;}
+.particles span:nth-child(4){left:60%;animation-delay:1s;}
+.particles span:nth-child(5){left:80%;animation-delay:7s;}
+.particles span:nth-child(6){left:90%;animation-delay:3s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) scale(0);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-10vh) scale(1);
+        opacity:0;
+    }
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.glass{
+    width:100%;
+    max-width:1100px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:24px;
+    padding:50px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.3);
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#dbeafe;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.status{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    background:rgba(16,185,129,.2);
+    border:1px solid rgba(16,185,129,.4);
+    color:#a7f3d0;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,0.12);
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:1.2rem;
+}
+
+.card p{
+    color:#dbeafe;
+    line-height:1.6;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#cbd5e1;
+}
+
+.footer strong{
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="container">
+    <div class="glass">
+
+        <div class="hero">
+<h3>Project One</h3>
+<br>
+            <h1>☁️ Cloud Infrastructure</h1>
+
+            <p>
+                Welcome to my cloud-hosted environment. This server is running
+                securely and efficiently, powered by modern cloud technologies,
+                automation, and scalable infrastructure.
+            </p>
+
+            <div class="status">
+                ● SYSTEM STATUS: OPERATIONAL
+            </div>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>🚀 Deployment</h3>
+                <p>
+                    Continuous deployment pipelines deliver applications
+                    quickly and reliably.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔒 Security</h3>
+                <p>
+                    Protected by security groups, encryption,
+                    and cloud best practices.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Performance</h3>
+                <p>
+                    Optimized infrastructure designed for speed,
+                    resilience, and scalability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>☁️ AWS Ready</h3>
+                <p>
+                    Built with cloud-native architecture using
+                    AWS services and automation.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>
+                Built with ❤️  by <strong>Jamil Khan</strong>
+            </p>
+           
+        </div>
+
+    </div>
+</div>
 
 
-Every cloud engineer's journey starts here — launching a virtual server and making it serve something to the world. But today's project isn't just about getting a page to load. It's about understanding *why* each piece exists: the security group acting as a virtual firewall, the key pair authenticating your SSH session, the user data script bootstrapping the server before you ever log in.
 
-This is Day 1 of my 30-day AWS challenge. Each day I build one project that maps to a real AWS service domain. By the end, I'll have a working portfolio of 30 deployments — and a solid foundation for the SAA-C03 exam.
 
----
-
-## Architecture overview
-
-The setup is deliberately simple: a single EC2 instance in the default VPC, wrapped in a custom security group, accessible over HTTP/HTTPS from anywhere and over SSH from your IP only.
-
-<img
-  src="/projectImages/architect.png"
-  alt="Day 1 EC2 web server running live"
-  style={{ width: '100%', borderRadius: '8px', margin: '1.5rem 0' }}
-/>
-
-The security group is the most important component here. It's a **stateful** virtual firewall — allow inbound port 80, and the return traffic is automatically permitted without an explicit outbound rule. This is fundamentally different from NACLs, which require you to define both directions explicitly.
-
----
-
-## Step-by-step build
-
-### Step 1 — Create a key pair
-
-Navigate to **EC2 → Key Pairs → Create key pair**. Name it `day1-key`, choose RSA format, and download the `.pem` file. This is your only chance to download it — store it somewhere safe.
-
-```bash
-# Secure the key file immediately after download
-chmod 400 day1-key.pem
-```
-
----
-
-### Step 2 — Configure the security group
-
-Go to **EC2 → Security Groups → Create security group**. Name it `day1-webserver-sg`. Add these inbound rules:
-
-| Type  | Port | Source       | Reason             |
-|-------|------|--------------|--------------------|
-| HTTP  | 80   | 0.0.0.0/0    | Public web access  |
-| HTTPS | 443  | 0.0.0.0/0    | Secure web access  |
-| SSH   | 22   | My IP only   | Admin access       |
-
-> ⚠️ **Security warning:** Never set the SSH source to `0.0.0.0/0`. That exposes port 22 to the entire internet and every automated scanner on it. Always restrict SSH to your IP (`/32` CIDR). This is a favourite SAA-C03 exam trap.
-
----
-
-### Step 3 — Launch the EC2 instance
-
-Go to **EC2 → Launch Instance** and fill in:
-
-- **AMI:** Amazon Linux 2023 (free tier eligible)
-- **Instance type:** `t2.micro`
-- **Key pair:** `day1-key`
-- **Security group:** `day1-webserver-sg` (from step 2)
-- **Storage:** 8 GiB gp3 (default)
-
-In **Advanced → User Data**, paste this bootstrap script:
-
-```bash
-#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Day 1 — $(hostname -f)</h1>" > /var/www/html/index.html
-```
-
-User data runs **once** at first boot. The instance installs Apache and starts serving before you ever SSH in.
-
----
-
-### Step 4 — Verify and connect
-
-Once the instance shows **running** (~60 seconds), copy its Public IPv4 address. Open `http://<your-ip>` in a browser — you should see your Day 1 page.
-
-To SSH in:
-
-```bash
-ssh -i day1-key.pem ec2-user@<your-public-ip>
-```
-
-Once inside, explore a bit:
-
-```bash
-# Edit the web page
-sudo nano /var/www/html/index.html
-
-# Watch live access logs
-sudo tail -f /var/log/httpd/access_log
-
-# Confirm Apache is healthy
-systemctl status httpd
-```
-
-> 💡 **Pro tip:** Run `curl http://169.254.169.254/latest/meta-data/` from inside the instance. This is the EC2 Instance Metadata Service (IMDS) — it returns the instance's own ID, availability zone, IAM role credentials, and more. Memorise that IP address for the SAA-C03 exam.
-
----
-
-### Step 5 — Clean up
-
-Terminate the instance via **EC2 → Instances → Instance state → Terminate**. Then delete the security group and key pair.
-
-Good habit: always clean up after each day's project. A forgotten `t2.micro` costs ~$8/month. Over 30 days that adds up.
-
----
-
-## What's next
-
-**Day 2** takes a completely different approach to web hosting — no servers, no SSH, no OS to patch. We'll host a static website on S3 and put CloudFront in front of it as a global CDN. Same outcome (a website), fundamentally different architecture.
+</body></html>
