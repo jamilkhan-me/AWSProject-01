@@ -1,4 +1,4 @@
-
+# AWSProject 01
 
 Every cloud engineer's journey starts here — launching a virtual server and making it serve something to the world. But today's project isn't just about getting a page to load. It's about understanding *why* each piece exists: the security group acting as a virtual firewall, the key pair authenticating your SSH session, the user data script bootstrapping the server before you ever log in.
 
